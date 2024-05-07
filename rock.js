@@ -26,27 +26,32 @@ function getHumanChoice(){
     return(choice);
 }
 
-function playRound(hum , com){
+for(let i = 0 ; i < 5 ; i++){
 
-    if (hum === com){
-        console.log('it"s a tie');
+        const HumanSelection = getHumanChoice();
+        const ComputerSelection = getComputerChoice();
+
+
+        function playRound(hum , com){
+
+            if (hum === com){
+                console.log('it"s a tie');
+            }
+            else if((hum === 'rock' && com === 'scissors') || (hum === 'paper' && com === 'rock') || (hum==='scissors' && com==='paper')) 
+            {
+                console.log('you won the game ' + hum + ' beats the '+ com)
+                HumanScore++;
+
+            }
+            else
+            {
+                console.log('you lost the game ' + com + ' beats the '+ hum);
+                ComputerScore++;
+            }
+
+        }
+            playRound(HumanSelection, ComputerSelection)
+        console.log('human score is  ' + HumanScore)
+        console.log('computer score is  ' + ComputerScore)
     }
-    else if((hum === 'rock' && com === 'scissors') || (hum === 'paper' && com === 'rock') || (hum==='scissors' && com==='paper')) 
-    {
-        console.log('you won the game ' + hum + ' beats the '+ com)
-        HumanScore++;
 
-    }
-    else
-    {
-        console.log('you lost the game ' + com + ' beats the '+ hum);
-        ComputerScore++;
-    }
-}
-
-const HumanSelection = getHumanChoice();
-const ComputerSelection = getComputerChoice();
-
-playRound(HumanSelection, ComputerSelection);
-console.log(HumanScore)
-console.log(ComputerScore)

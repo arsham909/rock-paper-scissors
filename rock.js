@@ -13,12 +13,11 @@ function getComputerChoice(){
         break;
         case 3:  choice = 'scissors';
         break;
-
-
     }
-
-
-    
     return(choice)
+}
 
+function getHumanChoice(){
+    let choice = prompt('please write your decision');
+    return(choice);
 }

@@ -1,5 +1,9 @@
 console.log("Hello Wssordld")
 
+let HumanScore = ComputerScore = 0;
+console.log(HumanScore)
+console.log(ComputerScore)
+
 
 function getComputerChoice(){
 
